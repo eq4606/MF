@@ -1,0 +1,23 @@
+<h2>ניהול האוצר</h2>
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>שם</th>
+      <th>סוג</th>
+      <th>תאריך יצירה</th>
+      <th>פעולות</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let asset of assets">
+      <td>{{ asset.id }}</td>
+      <td>{{ asset.name }}</td>
+      <td>{{ asset.type }}</td>
+      <td>{{ asset.createdAt }}</td>
+      <td>
+        <button (click)="deleteAsset(asset.id)">מחיקה</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
